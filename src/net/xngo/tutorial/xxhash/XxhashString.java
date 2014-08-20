@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.io.IOException;
 
 /**
- * Hash string.
+ * Basic example showing how to get the hash value of string using XXHash.
  * @author Xuan Ngo
  *
  */
