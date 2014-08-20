@@ -1,4 +1,4 @@
-package net.xngo.tutorial.io;
+package net.xngo.tutorial.java.io;
 
 import java.text.DecimalFormat;
 

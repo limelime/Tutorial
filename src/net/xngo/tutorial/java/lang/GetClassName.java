@@ -1,4 +1,4 @@
-package net.xngo.tutorial.lang;
+package net.xngo.tutorial.java.lang;
 
 /**
  * Get class name.
