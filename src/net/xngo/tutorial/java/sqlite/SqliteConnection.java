@@ -16,7 +16,7 @@ public class SqliteConnection
   public static void main(String[] args)
   {
    
-    // Where you database is or will be stored.
+    // Where your database is or will be stored.
     String databaseURL = "jdbc:sqlite:/C:/temp/tmpSqlite.db";
     
     try
