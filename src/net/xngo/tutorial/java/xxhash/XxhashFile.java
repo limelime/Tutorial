@@ -1,4 +1,4 @@
-package net.xngo.tutorial.xxhash;
+package net.xngo.tutorial.java.xxhash;
  
 import net.jpountz.xxhash.XXHashFactory;
 import net.jpountz.xxhash.StreamingXXHash32;
