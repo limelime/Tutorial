@@ -24,6 +24,9 @@ public class ConsoleAnimation
     
     // Note: '\b' will not work in Eclipse console. There is bug.
     //      https://bugs.eclipse.org/bugs/show_bug.cgi?id=76936
+    
+    // Note: '\b' will not work over newline.
+    //      http://stackoverflow.com/questions/3593339/why-doesnt-sys-stdout-write-b-backspace-against-newlines
   }
 
   public static void sleep()
