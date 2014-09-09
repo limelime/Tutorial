@@ -31,7 +31,7 @@ public class ParameterizedString
               , i, l, f, d, c, s, now);
     System.out.println(pString);
     
-    // Showing different useful features.
+    // Show different useful features.
     pString = String.format("Parameterized string examples: \n"
             + "\t Integer = %,d     \n" // Add thousand separator.
             + "\t Long    = %d      \n"
@@ -44,7 +44,7 @@ public class ParameterizedString
             , i, l, f, d, c, s, now);
     System.out.println(pString);
     
-    // Showing different useful features.
+    // Showa mix of useful features.
     pString = String.format("Parameterized string examples: \n"
             + "\t Zero padding             = %09d  \n"  // Pad zeros so the length is 9 digits.
             + "\t Decimal Point / Thousand = %,.2f \n"  // Add decimal point and thousand separator.
