@@ -21,13 +21,13 @@ public class ParameterizedString
  
     // Simple parameterized string.
     String pString = String.format("Parameterized string examples: \n"
-              + "\t Integer = %d \n"
-              + "\t Long    = %d \n"
-              + "\t Float   = %f \n"
-              + "\t Double  = %f \n"
-              + "\t Char    = %c \n"
-              + "\t String  = %s \n"
-              + "\t Now     = %tF\n"
+            + "\t Integer = %d    \n"
+            + "\t Long    = %d    \n"
+            + "\t Float   = %f    \n"
+            + "\t Double  = %f    \n"
+            + "\t Char    = %c    \n"
+            + "\t String  = %s    \n"
+            + "\t Now     = %tF   \n"
               , i, l, f, d, c, s, now);
     System.out.println(pString);
     
@@ -44,7 +44,7 @@ public class ParameterizedString
             , i, l, f, d, c, s, now);
     System.out.println(pString);
     
-    // Showa mix of useful features.
+    // Show mix of useful features.
     pString = String.format("Parameterized string examples: \n"
             + "\t Zero padding             = %09d  \n"  // Pad zeros so the length is 9 digits.
             + "\t Decimal Point / Thousand = %,.2f \n"  // Add decimal point and thousand separator.
