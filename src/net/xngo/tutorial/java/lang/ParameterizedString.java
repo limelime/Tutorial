@@ -40,9 +40,8 @@ public class ParameterizedString
             + "\t Now     = %tF     \n" // YYYY-MM-DD
             + "\t Argument= %2$d    \n" // Get the value of the 2nd input argument/parameter.
             , i, l, f, d, c, s, now);
-    System.out.println(pString);      
+    System.out.println(pString);
+
   }
-
-
 
 }
