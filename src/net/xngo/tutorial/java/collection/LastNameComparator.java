@@ -2,6 +2,12 @@ package net.xngo.tutorial.java.collection;
 
 import java.util.Comparator;
 
+/**
+ * Different ordering than natural order of the object.
+ * http://docs.oracle.com/javase/tutorial/collections/interfaces/order.html
+ * @author Xuan Ngo
+ *
+ */
 public class LastNameComparator implements Comparator<Name>
 {
   // Sort by last name and then follow by first name.
