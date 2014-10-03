@@ -27,7 +27,8 @@ public class StringDifference
      *    For more info, see https://code.google.com/p/google-diff-match-patch/wiki/API
      */
     diff_match_patch difference = new diff_match_patch();
-    LinkedList<Diff> deltas = difference.diff_main("Good dog", "Bad dog");
+    LinkedList<Diff> deltas = difference.diff_main("mouse Good dog", "sofas Bad dog");
+    difference.diff_cleanupSemantic(deltas);
     
     // Reconstruct texts from the deltas
     //  text1 = all deletion (-1) and equality (0).
@@ -45,6 +46,7 @@ public class StringDifference
         text1 += d.text;
         text2 += d.text;
       }
+      System.out.println(d);
     }
     
     System.out.println(text1);
