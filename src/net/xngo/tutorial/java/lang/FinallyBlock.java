@@ -1,7 +1,7 @@
 package net.xngo.tutorial.java.lang;
 
 /**
- * Show 'finally' code will be called after exception is thrown or a 'return' statement.
+ * Show 'finally' code block will be called after exception is thrown or a 'return' statement.
  * The only time 'finally' won't be called is if you call System.exit() or if the JVM crashes first.
  * @author Xuan Ngo
  *
