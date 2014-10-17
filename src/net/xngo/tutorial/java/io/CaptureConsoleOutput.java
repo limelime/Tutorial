@@ -4,7 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * Show how to capture standard output.
+ * Show how to capture console standard output.
  * @author Xuan Ngo
  *
  */
