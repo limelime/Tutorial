@@ -37,9 +37,9 @@ public class ReplaceAllRegex
     /*
      * Replace all adjacent wildcard(*) with 1 wildcard(*).
      */
-    s = "wild***card";
+    s = "multiple****wild***card*";
     s = s.replaceAll("[\\*\\*]+", "*");
-    System.out.println(s); // Output: wild*card
+    System.out.println(s); // Output: multiple*wild*card*
     
     
   }
