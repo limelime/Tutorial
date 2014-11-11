@@ -4,6 +4,7 @@ import org.flywaydb.core.Flyway;
 
 /**
  * How to use Flywaydb programmatically.
+ * Need to add flyway-core-3.0.jar in your classpath.
  * @author Xuan Ngo
  *
  */
