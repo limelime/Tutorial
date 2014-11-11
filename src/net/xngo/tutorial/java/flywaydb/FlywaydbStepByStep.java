@@ -6,7 +6,7 @@ import org.flywaydb.core.api.MigrationInfoService;
 import org.flywaydb.core.api.MigrationInfo;
 
 /**
- * How to use Flywaydb programmatically: Breakdown step-by-step migrations
+ * How to use Flywaydb programmatically: Breakdown step-by-step migrations.
  * Need to add flyway-core-3.0.jar in your classpath.
  * @author Xuan Ngo
  *
