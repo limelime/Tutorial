@@ -21,8 +21,6 @@ public class FlywaydbBasic
     // Set the location of all your SQL files: V?__*.sql
     flyway.setLocations("filesystem:C:/temp/Xuan/latest/test/sql/");
     
-    flyway.setInitDescription("First version database");
-    
     // Force the creation of 'schema_version' table on existing database.
     flyway.setInitOnMigrate(true);
     
