@@ -7,7 +7,8 @@ import org.flywaydb.core.api.MigrationInfo;
 
 /**
  * How to use Flywaydb programmatically: Breakdown step-by-step migrations.
- * Need to add flyway-core-3.0.jar in your classpath.
+ * Libraries needed: flyway-core-3.0.jar, sqlite-jdbc-3.7.2.jar
+ * 
  * @author Xuan Ngo
  *
  */
