@@ -15,18 +15,18 @@ public class FlywaydbStepByStep
 {
   public static void main(String[] args)
   {
-    Flyway flyway = new Flyway();
     
+    Flyway flyway = new Flyway();
+
     // Set your datasource.
     flyway.setDataSource("jdbc:sqlite:/C:/temp/Xuan/latest/test/FilesHub.db", null, null);
     
     // Set the location of all your SQL files: V?__*.sql
-    flyway.setLocations("filesystem:C:\\temp\\Xuan\\latest\\test\\sql\\");
+    flyway.setLocations("filesystem:C:/temp/Xuan/latest/test/sql/");
     
     // Force the creation of 'schema_version' table on existing database.
     flyway.setInitOnMigrate(true);
     
- 
     /**
      * Find which versions are not applied yet.
      */
@@ -43,8 +43,12 @@ public class FlywaydbStepByStep
     /**
      * Apply version you like.
      */
-    MigrationVersion migrationVersion = MigrationVersion.fromVersion("2");
+    MigrationVersion migrationVersion = MigrationVersion.fromVersion("1");
     flyway.setTarget(migrationVersion);
     flyway.migrate(); // Migrate up to version set in setTarget().
+    
+    migrationVersion = MigrationVersion.fromVersion("2");
+    flyway.setTarget(migrationVersion);
+    flyway.migrate(); // Migrate up to version set in setTarget().    
   }
 }
