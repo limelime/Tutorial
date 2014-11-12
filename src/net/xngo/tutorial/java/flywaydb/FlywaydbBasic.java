@@ -4,7 +4,8 @@ import org.flywaydb.core.Flyway;
 
 /**
  * How to use Flywaydb programmatically.
- * Need to add flyway-core-3.0.jar in your classpath.
+ * Libraries needed: flyway-core-3.0.jar, sqlite-jdbc-3.7.2.jar
+ * 
  * @author Xuan Ngo
  *
  */
@@ -18,7 +19,9 @@ public class FlywaydbBasic
     flyway.setDataSource("jdbc:sqlite:/C:/temp/Xuan/latest/test/FilesHub.db", null, null);
     
     // Set the location of all your SQL files: V?__*.sql
-    flyway.setLocations("filesystem:C:\\temp\\Xuan\\latest\\test\\sql\\");
+    flyway.setLocations("filesystem:C:/temp/Xuan/latest/test/sql/");
+    
+    flyway.setInitDescription("First version database");
     
     // Force the creation of 'schema_version' table on existing database.
     flyway.setInitOnMigrate(true);
