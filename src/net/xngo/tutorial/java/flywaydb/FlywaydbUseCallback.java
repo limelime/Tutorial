@@ -6,8 +6,6 @@ import java.sql.Connection;
 
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.callback.FlywayCallback;
-import org.flywaydb.core.api.MigrationVersion;
-import org.flywaydb.core.api.MigrationInfoService;
 import org.flywaydb.core.api.MigrationInfo;
 
 /**
@@ -37,6 +35,7 @@ public class FlywaydbUseCallback implements FlywayCallback
     // Force the creation of 'schema_version' table on existing database.
     flyway.setInitOnMigrate(true);
     
+    // Add the callback.
     FlywaydbUseCallback fcallback = new FlywaydbUseCallback();
     flyway.setCallbacks(fcallback);
     
