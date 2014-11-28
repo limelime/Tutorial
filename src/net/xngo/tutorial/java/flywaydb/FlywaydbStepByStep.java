@@ -1,5 +1,7 @@
 package net.xngo.tutorial.java.flywaydb;
 
+import java.io.File;
+
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.MigrationVersion;
 import org.flywaydb.core.api.MigrationInfoService;
@@ -17,13 +19,18 @@ public class FlywaydbStepByStep
   public static void main(String[] args)
   {
     
+    // Delete myDatabaseFile.db so that all migrations are run.
+    File dbFile = new File("C:/temp/Xuan/latest/test/myDatabaseFile.db");
+    dbFile.delete();
+    
+    // Create Flywaydb instance.
     Flyway flyway = new Flyway();
-
+    
     // Set your datasource.
-    flyway.setDataSource("jdbc:sqlite:/C:/temp/Xuan/latest/test/FilesHub.db", null, null);
+    flyway.setDataSource("jdbc:sqlite:/"+dbFile.getAbsolutePath(), null, null);
     
     // Set the location of all your SQL files: V?__*.sql
-    flyway.setLocations("filesystem:C:/temp/Xuan/latest/test/sql/");
+    flyway.setLocations("filesystem:C:/temp/Xuan/latest/test/upgrade/sql/");
     
     // Force the creation of 'schema_version' table on existing database.
     flyway.setInitOnMigrate(true);
