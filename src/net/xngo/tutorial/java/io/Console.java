@@ -3,14 +3,23 @@ package net.xngo.tutorial.java.io;
 public class Console
 {
   private int lastLineLength = 0;
+  private StringBuilder progressLine = new StringBuilder();
   
   public void printProgress(String line)
   {
-    for(int i=0; i<lastLineLength; i++)
-    {
-      System.out.print('\b');
-    }
-    System.out.print(line); 
+    this.progressLine.append('\r');
+    this.progressLine.append(line);
+    
+    // If last line is longer, then mask with space.
+    final int spaces = lastLineLength-line.length();
+    for(int i=0; i<spaces; i++)
+      this.progressLine.append(' ');
+    
+    // Print the progress line.
+    System.out.print(this.progressLine.toString());
+    this.progressLine.setLength(0); // Reset the progress line.
+    
+    // Update previous line length.
     this.lastLineLength = line.length();
   }
   
