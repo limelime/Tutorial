@@ -23,16 +23,16 @@ public class HumanReadableFileSize
   
   public static void main(String[] args)
   {
-    System.out.println(readableFileSize(0));
-    System.out.println(readableFileSize(1));
-    System.out.println(readableFileSize(937));
-    System.out.println(readableFileSize(1024));
-    System.out.println(readableFileSize(1124));
-    System.out.println(readableFileSize(1224*1024));
-    System.out.println(readableFileSize(1324*1024*1024));
-    System.out.println(readableFileSize(1424L*1024L*1024L*1024L));
-    System.out.println(readableFileSize(1524L*1024L*1024L*1024L*1024L));
-    System.out.println(readableFileSize(1624L*1024L*1024L*1024L*1024L*1024L));
+    System.out.println(readableFileSize(0));                                   // 0 byte                                                               
+    System.out.println(readableFileSize(1));                                   // 1 byte                                                               
+    System.out.println(readableFileSize(937));                                 // 937 bytes                                                              
+    System.out.println(readableFileSize(1024));                                // 1 KB                                                                    
+    System.out.println(readableFileSize(1124));                                // 1.1 KB                                                                  
+    System.out.println(readableFileSize(1224*1024));                           // 1.2 MB                                                                       
+    System.out.println(readableFileSize(1324*1024*1024));                      // 1.29 GB                                                                           
+    System.out.println(readableFileSize(1424L*1024L*1024L*1024L));             // 1.39 TB                                                                                    
+    System.out.println(readableFileSize(1524L*1024L*1024L*1024L*1024L));       // 1.49 PB                                                                                          
+    System.out.println(readableFileSize(1624L*1024L*1024L*1024L*1024L*1024L)); // 1.59 EB 
   }
   
 }
