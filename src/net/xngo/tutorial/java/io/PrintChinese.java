@@ -12,7 +12,5 @@ public class PrintChinese
     System.out.println(chineseString);
     PrintStream ps = new PrintStream(System.out, true, "UTF-8");
     ps.println(chineseString);
-    
-
   }
 }
