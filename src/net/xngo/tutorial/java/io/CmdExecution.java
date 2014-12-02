@@ -13,7 +13,7 @@ public class CmdExecution
     String os_name = System.getProperty("os.name");
     String cmdLine[];
     if(os_name.indexOf("Windows")!=-1)
-      cmdLine= new String[] {"cmd", "/C", "dir > .\\test_out.txt"};   // dir > test_out.txt
+      cmdLine= new String[] {"cmd", "/c", "dir > .\\test_out.txt"};   // dir > test_out.txt
     else
       cmdLine= new String[] {"/bin/sh", "-c", "ls > ./test_out.txt"}; // ls > test_out.txt
     
@@ -46,9 +46,9 @@ public class CmdExecution
 
       try { process.waitFor(); } catch(InterruptedException ex){ ex.printStackTrace(); } // Wait for the process to terminate.
       if(process.exitValue()==0)
-        System.out.println("true");
+        System.out.println("\texitValue: true");
       else
-        System.out.println("false");      
+        System.out.println("\texitValue: false");      
 
     }
     catch(IOException ex)
