@@ -1,6 +1,8 @@
 package net.xngo.tutorial.java.io;
 
 import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class CmdExecution
 {
