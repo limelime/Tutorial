@@ -34,7 +34,7 @@ public class CmdExecution
       
       
       /*
-      // Get console output.
+      // Get console output from the command.
       BufferedReader in = new BufferedReader(  
                           new InputStreamReader(process.getInputStream()));  
       String line = null;  
@@ -42,11 +42,13 @@ public class CmdExecution
       {  
           System.out.println(line);  
       }       
-
+      */
 
       try { process.waitFor(); } catch(InterruptedException ex){ ex.printStackTrace(); } // Wait for the process to terminate.
-      process.exitValue();
-      */
+      if(process.exitValue()==0)
+        System.out.println("true");
+      else
+        System.out.println("false");      
 
     }
     catch(IOException ex)
