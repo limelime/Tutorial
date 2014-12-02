@@ -11,9 +11,9 @@ public class CmdExecution
     String os_name = System.getProperty("os.name");
     String cmdLine[];
     if(os_name.indexOf("Windows")!=-1)
-      cmdLine= new String[] {"cmd", "/C", "dir > .\\test_out.txt"};
+      cmdLine= new String[] {"cmd", "/C", "dir > .\\test_out.txt"};   // dir > test_out.txt
     else
-      cmdLine= new String[] {"/bin/sh", "-c", "ls > ./test_out.txt"};
+      cmdLine= new String[] {"/bin/sh", "-c", "ls > ./test_out.txt"}; // ls > test_out.txt
     
     
     try
