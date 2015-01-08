@@ -47,7 +47,7 @@ public class ParameterizedString
     // Show mix of useful features.
     pString = String.format("Parameterized string examples: \n"
             + "\t Zero padding             = %09d  \n"  // Pad zeros so the length is 9 digits.
-            + "\t Decimal Point / Thousand = %,.2f \n"  // Add decimal point and thousand separator.
+            + "\t Decimal Point / Thousand = %,.2f \n"  // Add thousand separator(,) and decimal point(.).
             , i, d);
     System.out.println(pString);    
 
