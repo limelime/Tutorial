@@ -22,7 +22,7 @@ public class StandardOutputTest
   Random random = new Random();
   final int MAX = 100; // Milliseconds.
   
-  // Get the original standard out before changing it.
+  // Store the original standard out before changing it.
   private final PrintStream originalStdOut = System.out;
   private ByteArrayOutputStream consoleContent = new ByteArrayOutputStream();
   
