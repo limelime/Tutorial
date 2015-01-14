@@ -3,7 +3,7 @@ package net.xngo.tutorial.java.testng;
 /**
  * AnnotationsExecutionOrder.java
  * Show execution order of commonly used annotations of TestNG
- * Author: Xuan Ngo
+ * @author Xuan Ngo
  */
 
 /*
