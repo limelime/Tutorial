@@ -11,6 +11,11 @@ import org.testng.annotations.AfterMethod;
 
 import static org.testng.Assert.assertTrue;
 
+/**
+ * Show how to unit test standard output.
+ * @author Xuan Ngo
+ *
+ */
 public class StandardOutputTest
 {
   // Variables
