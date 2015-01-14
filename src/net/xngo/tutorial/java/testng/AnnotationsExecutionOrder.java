@@ -106,7 +106,7 @@ public class AnnotationsExecutionOrder
     }
     catch (Exception ex)
     {
-      System.out.println("Can't sleep.");
+      ex.printStackTrace();
     }
 
   }
