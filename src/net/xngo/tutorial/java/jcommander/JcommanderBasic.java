@@ -22,7 +22,7 @@ public class JcommanderBasic
   {
     JcommanderBasic options = new JcommanderBasic();
     JCommander jc = new JCommander(options);  // Add your class holding the options.
-    jc.parse(args);                           // Ask JCommander to parse the options.
+    jc.parse(args);                           // Ask JCommander to parse the command line arguments.
     jc.setProgramName("ApplicationName");     // Set you application name.
     
     /** Validations and what to do with the options entered **/
