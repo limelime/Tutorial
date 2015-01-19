@@ -8,7 +8,7 @@ import com.beust.jcommander.Parameter;
  * @author Xuan Ngo
  *
  */
-public class JcommanderBasic
+public class JCmdBasic
 {
   /** Variables to hold option value **/
   @Parameter(names = {"-a", "--age"}, description = "Your age.")
@@ -20,7 +20,7 @@ public class JcommanderBasic
   
   public static void main(String[] args)
   {
-    JcommanderBasic options = new JcommanderBasic();
+    JCmdBasic options = new JCmdBasic();
     JCommander jc = new JCommander(options);  // Add your class holding the options.
     jc.parse(args);                           // Ask JCommander to parse the command line arguments.
     jc.setProgramName("ApplicationName");     // Set you application name.
