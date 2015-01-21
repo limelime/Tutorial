@@ -3,6 +3,7 @@ package net.xngo.tutorial.java.lang;
 /**
  * Show use of generic type.
  * http://docs.oracle.com/javase/tutorial/java/generics/types.html
+ * http://www.oracle.com/technetwork/articles/java/juneau-generics-2255374.html
  * @author Xuan Ngo
  *
  */
