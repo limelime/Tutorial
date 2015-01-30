@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Tutorial with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/temp/Xuan/bckable/work/github/Tutorial/jars/Encoding.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="net.xngo.tutorial.java.io.Encoding"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ lz4-1.2.0.jar sqlite-jdbc-3.7.2.jar commons-io-2.4.jar google-diff-match-patch.jar testng-6.8.8.jar flyway-core-3.0.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="C:/temp/Xuan/bckable/work/github/Tutorial/bin"/>
+            <zipfileset dir="C:\temp\Xuan\bckable\work\github\Tutorial\lib" includes="lz4-1.2.0.jar"/>
+            <zipfileset dir="C:\temp\Xuan\bckable\work\github\Tutorial\lib" includes="sqlite-jdbc-3.7.2.jar"/>
+            <zipfileset dir="C:\temp\Xuan\bckable\work\github\Tutorial\lib" includes="commons-io-2.4.jar"/>
+            <zipfileset dir="C:\temp\Xuan\bckable\work\github\Tutorial\lib" includes="google-diff-match-patch.jar"/>
+            <zipfileset dir="C:\temp\Xuan\bckable\work\github\Tutorial\lib" includes="testng-6.8.8.jar"/>
+            <zipfileset dir="C:\temp\Xuan\bckable\work\github\Tutorial\lib" includes="flyway-core-3.0.jar"/>
+        </jar>
+    </target>
+</project>
