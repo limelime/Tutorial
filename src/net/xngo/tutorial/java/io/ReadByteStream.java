@@ -2,87 +2,74 @@ package net.xngo.tutorial.java.io;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+
 /**
+ * Description: Read stream data into buffer for the beginning, the middle and the end of the stream.
+ * 
  * Reference: http://www.tutorialspoint.com/java/io/inputstream_read_byte.htm
  *
  */
 public class ReadByteStream
 {
-  public InputStream is = null;
-  
-  public ReadByteStream()
-  {
-    try
-    {
-      is = new FileInputStream("./filename.txt");
-    }
-    catch(Exception ex){}
-  }
-  
+
+
   public static void main(String[] args)
   {
-    final int buffer_size = 5;
+    int buffer_size = 5;
 
-    byte[] buffer=new byte[buffer_size];
-    
-    ReadByteStream mstream = new ReadByteStream();
-    
+    byte[] buffer = new byte[buffer_size];
     try
     {
+      InputStream inputStream = new FileInputStream("./filename.txt"); // File contains letters from a to z.
+      
+      // Total length of stream.
+      int total_length = inputStream.available();
 
-       
-       int total_length = mstream.is.available();
-       
-       System.out.print("Beginning: ");
-         mstream.displayBytes(buffer);
-         
-       int skip_n_to_middle = (total_length/2)-(buffer_size/2)-buffer_size;
-       System.out.println("Skip the next "+skip_n_to_middle+" bytes.");
-       mstream.is.skip(skip_n_to_middle);
-       mstream.displayBytes(buffer);
-       
-       int skip_n_to_last = total_length-buffer_size-skip_n_to_middle-buffer_size-buffer_size;
-       System.out.println("Skip the next "+skip_n_to_middle+" bytes.");
-       mstream.is.skip(skip_n_to_last);
-       mstream.displayBytes(buffer);       
-       
-       System.out.println("Characters printed:"+total_length+"="+skip_n_to_middle);
-       
-       mstream.is.skip(1);
-       
+      //*** Beginning buffer
+      System.out.print("Beginning: ");
+      inputStream.read(buffer);       // read stream data into buffer
+      displayBuffer(buffer);
 
-       
+      //*** Middle buffer
+      int skip_n_to_middle = (total_length / 2) - (buffer_size / 2) - buffer_size;
+      System.out.println("Skip the next " + skip_n_to_middle + " bytes.");
+      inputStream.skip(skip_n_to_middle);
+      inputStream.read(buffer);
+      displayBuffer(buffer);
 
-       mstream.is.close();
-       
+      //*** Last buffer
+      int skip_n_to_last = total_length - buffer_size - skip_n_to_middle - buffer_size - buffer_size;
+      System.out.println("Skip the next " + skip_n_to_middle + " bytes.");
+      inputStream.skip(skip_n_to_last);
+      inputStream.read(buffer);
+      displayBuffer(buffer);
+
+      inputStream.close();
+
     }
-    catch(Exception e)
+    catch (Exception e)
     {
-       // if any I/O error occurs
-       e.printStackTrace();
+      e.printStackTrace();
     }
-    
+
   }
   
-  public void displayBytes(byte[] buffer)
+  // Helper to display buffer.
+  static public void displayBuffer(byte[] buffer)
   {
-    try
+
+    char c;
+    // for each byte in the buffer
+    for (byte b : buffer)
     {
-      char c;
-      // read stream data into buffer
-      this.is.read(buffer);    
-      // for each byte in the buffer
-      for(byte b:buffer)
-      {
-         // convert byte to character
-         c=(char)b;
-         
-         // prints character
-         System.out.print(c);
-      }
-      System.out.println();
+      // convert byte to character
+      c = (char) b;
+
+      // prints character
+      System.out.print(c);
     }
-    catch(Exception ex){}
+    System.out.println();
+
   }
 
 }
