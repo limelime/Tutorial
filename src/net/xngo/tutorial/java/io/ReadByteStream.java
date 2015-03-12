@@ -5,13 +5,10 @@ import java.io.InputStream;
 
 /**
  * Description: Read stream data into buffer for the beginning, the middle and the end of the stream.
- * 
- * Reference: http://www.tutorialspoint.com/java/io/inputstream_read_byte.htm
- *
+ * @author Xuan Ngo
  */
 public class ReadByteStream
 {
-
 
   public static void main(String[] args)
   {
