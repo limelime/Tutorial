@@ -41,6 +41,8 @@ public class ReadByteStream
       inputStream.read(buffer);
       displayBuffer("Last: ", buffer);
 
+      System.out.println("END"); // Use as a marker to see non-visible character(e.g. newline).
+      
       inputStream.close();
 
     }
