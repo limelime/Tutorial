@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 /**
- * Description: Read stream data into buffer for the beginning, the middle and the end of the stream.
+ * Description: Read data stream into buffer for the beginning, the middle and the end of the stream.
  * @author Xuan Ngo
  */
 public class ReadByteStream
@@ -17,29 +17,29 @@ public class ReadByteStream
     byte[] buffer = new byte[buffer_size];
     try
     {
-      InputStream inputStream = new FileInputStream("./filename.txt"); // File contains letters from a to z.
+      // Assuming filename.txt does exist. Tested with file containing letters from a to z.
+      InputStream inputStream = new FileInputStream("./filename.txt");
       
       // Total length of stream.
       int total_length = inputStream.available();
 
       //*** Beginning buffer
-      System.out.print("Beginning: ");
       inputStream.read(buffer);       // read stream data into buffer
-      displayBuffer(buffer);
+      displayBuffer("Beginning: ", buffer);
 
       //*** Middle buffer
       int skip_n_to_middle = (total_length / 2) - (buffer_size / 2) - buffer_size;
-      System.out.println("Skip the next " + skip_n_to_middle + " bytes.");
+      System.out.println("\tWill skip the next " + skip_n_to_middle + " bytes.");
       inputStream.skip(skip_n_to_middle);
       inputStream.read(buffer);
-      displayBuffer(buffer);
+      displayBuffer("Middle: ", buffer);
 
       //*** Last buffer
       int skip_n_to_last = total_length - buffer_size - skip_n_to_middle - buffer_size - buffer_size;
-      System.out.println("Skip the next " + skip_n_to_middle + " bytes.");
+      System.out.println("\tWill skip the next " + skip_n_to_middle + " bytes.");
       inputStream.skip(skip_n_to_last);
       inputStream.read(buffer);
-      displayBuffer(buffer);
+      displayBuffer("Last: ", buffer);
 
       inputStream.close();
 
@@ -52,8 +52,11 @@ public class ReadByteStream
   }
   
   // Helper to display buffer.
-  static public void displayBuffer(byte[] buffer)
+  static public void displayBuffer(String text, byte[] buffer)
   {
+    // Text to print before the buffer.
+    System.out.print(text);
+    
     char c;
     // For each byte in the buffer
     for (byte b : buffer)
