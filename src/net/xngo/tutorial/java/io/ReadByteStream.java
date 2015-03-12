@@ -57,19 +57,17 @@ public class ReadByteStream
   // Helper to display buffer.
   static public void displayBuffer(byte[] buffer)
   {
-
     char c;
-    // for each byte in the buffer
+    // For each byte in the buffer
     for (byte b : buffer)
     {
-      // convert byte to character
+      // Convert byte to character
       c = (char) b;
 
-      // prints character
+      // Print character
       System.out.print(c);
     }
     System.out.println();
-
   }
 
 }
