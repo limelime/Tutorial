@@ -36,7 +36,7 @@ public class ReadByteStream
 
       //*** Last buffer
       int skip_n_to_last = total_length - buffer_size - skip_n_to_middle - buffer_size - buffer_size;
-      System.out.println("\tWill skip the next " + skip_n_to_middle + " bytes.");
+      System.out.println("\tWill skip the next " + skip_n_to_last + " bytes.");
       inputStream.skip(skip_n_to_last);
       inputStream.read(buffer);
       displayBuffer("Last: ", buffer);
