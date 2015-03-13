@@ -1,7 +1,7 @@
 package net.xngo.tutorial.java.apache.commons.io;
 
 import java.io.File;
-import java.nio.file.Files;
+import java.nio.file.Files; // Require java version 1.7
 import java.util.Collection;
 
 import org.apache.commons.io.FileUtils;
