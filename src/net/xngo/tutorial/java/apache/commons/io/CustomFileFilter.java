@@ -8,7 +8,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 
 /**
- * List all files without symbolic links.
+ * List all files and ignore symbolic links.
  * Provide your own implementation of *FileFilter.
  * @author root
  *
