@@ -12,13 +12,24 @@ import org.slf4j.LoggerFactory;
  */
 public class SLF4JBasic
 {
-  // Pros/Cons: http://slf4j.org/faq.html#declared_static
+  // Pros/Cons of static Logger: http://slf4j.org/faq.html#declared_static
   final static Logger logger = LoggerFactory.getLogger(SLF4JBasic.class);
   
   public static void main(String[] args)
   {
     logger.info("Hello World");
     System.out.println("Hello World from System.out.");
+    
+    
+    /**
+     * You don't configure your logging on SLF4j but through the logger
+     * implementation used, the binding used.
+     * slf4j-simple-X.jar: http://www.slf4j.org/api/org/slf4j/impl/SimpleLogger.html
+     *    It's either through system property
+     *      -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
+     *        or
+     *      -simplelogger.properties file on the classpath     
+     */
   }
 
 }
