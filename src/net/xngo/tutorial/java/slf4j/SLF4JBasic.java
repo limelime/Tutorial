@@ -17,7 +17,10 @@ public class SLF4JBasic
   
   public static void main(String[] args)
   {
-    logger.info("Hello World");
+    for(int i=0; i<3;i++)
+    {
+      logger.info("Hello World");
+    }
     System.out.println("Hello World from System.out.");
     
     
