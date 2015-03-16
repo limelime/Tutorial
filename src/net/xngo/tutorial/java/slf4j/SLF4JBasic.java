@@ -23,7 +23,7 @@ public class SLF4JBasic
     
     /**
      * You don't configure your logging on SLF4j but through the logger
-     * implementation used, the binding used.
+     * implementation used(i.e. binding used).
      * slf4j-simple-X.jar: http://www.slf4j.org/api/org/slf4j/impl/SimpleLogger.html
      *    It's either through system property
      *      -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
