@@ -12,11 +12,12 @@ import org.slf4j.LoggerFactory;
  */
 public class SLF4JBasic
 {
-
+  final static Logger logger = LoggerFactory.getLogger(SLF4JBasic.class);
+  
   public static void main(String[] args)
   {
-    Logger logger = LoggerFactory.getLogger(SLF4JBasic.class);
     logger.info("Hello World");
+    System.out.println("Hello World from System.out.");
   }
 
 }
