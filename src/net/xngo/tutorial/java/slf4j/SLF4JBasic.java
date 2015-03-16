@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SLF4JBasic
 {
+  // Pros/Cons: http://slf4j.org/faq.html#declared_static
   final static Logger logger = LoggerFactory.getLogger(SLF4JBasic.class);
   
   public static void main(String[] args)
