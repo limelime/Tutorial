@@ -50,20 +50,31 @@ public class SLF4JBasic
   
  */
 
-/* logback.xml:
-      <!-- You need slf4j-api-X.jar + logback-classic-X.jar. -->
+/* logback.xml: java -Dlogback.configurationFile=/path/to/config.xml
+      <!--
+        You need slf4j-api-X.jar, logback-classic-X.jar and logback-core-X.jar
+        
+        Pattern definition:
+          http://logback.qos.ch/manual/layouts.html#conversionWord
+      -->
       <configuration>
+        <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+          <file>myApp.log</file>
+          <encoder>
+            <pattern>%date %level [%thread] %-5level %logger{10} [%file:%line] %msg%n</pattern>
+          </encoder>
+        </appender>
+      
         <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
           <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
           </encoder>
         </appender>
-      
-        <logger name="deng" level="DEBUG"/>
-      
-        <root level="INFO">
+        
+        <root level="debug">
           <appender-ref ref="STDOUT" />
+          <appender-ref ref="FILE" />
         </root>
-      </configuration>  
+      </configuration> 
 */
 
