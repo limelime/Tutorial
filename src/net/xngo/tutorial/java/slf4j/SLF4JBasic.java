@@ -40,14 +40,14 @@ public class SLF4JBasic
 // Reference: http://saltnlight5.blogspot.ca/2013/08/how-to-configure-slf4j-with-different.html
 
 /* simplelogger.properties:
- *    org.slf4j.simpleLogger.defaultLogLevel=debug
- *    org.slf4j.simpleLogger.showDateTime=true
- *    org.slf4j.simpleLogger.dateTimeFormat=yyyy-MM-dd HH:mm:ss.SSS
+      org.slf4j.simpleLogger.defaultLogLevel=debug
+      org.slf4j.simpleLogger.showDateTime=true
+      org.slf4j.simpleLogger.dateTimeFormat=yyyy-MM-dd HH:mm:ss.SSS
  */
 
 
 /* log4j.properties:
- *    
+  
  */
 
 /* logback.xml:
