@@ -33,6 +33,13 @@ public class SLF4JBasic
      *        or
      *      -In simplelogger.properties file on your classpath(http://stackoverflow.com/a/5081386).     
      */
+    
+    /**
+     * Log level: DEBUG > INFO > WARN > ERROR > FATAL
+     * Logs that you will see will be the level defined and forward as listed as above.
+     * For example, if you set the root level=WARN, then only WARN, ERROR and FATAL will be 
+     *  logged.
+     */
   }
 
 }
