@@ -1,39 +1,42 @@
 <?xml version="1.0"?>
 <!--
-	You need slf4j-api-X.jar, logback-classic-X.jar and logback-core-X.jar
-	
-	Pattern definition:
-		http://logback.qos.ch/manual/layouts.html#conversionWord
+  You need slf4j-api-X.jar, logback-classic-X.jar and logback-core-X.jar
+  
+  Pattern definition:
+    http://logback.qos.ch/manual/layouts.html#conversionWord
 -->
 <configuration>
-  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-  	<file>mylog.log</file>
-    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-        <!-- daily rollover -->
-        <fileNamePattern>mylog.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-        <timeBasedFileNamingAndTriggeringPolicy
-            class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-            <!-- or whenever the file size reaches 1KB -->
-            <maxFileSize>1KB</maxFileSize>
-        </timeBasedFileNamingAndTriggeringPolicy>
-        <!-- keep 30 days' worth of history -->
-        <maxHistory>30</maxHistory>
-    </rollingPolicy>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+                 ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+          <charset>UTF-8</charset>
+          <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{35}) - %msg %n</pattern>
+        </encoder>
+    </appender>
 
-    <encoder>
-      <pattern>%date %level [%thread] %-5level %logger{36} [%file:%line] %msg%n</pattern>
-    </encoder>
-    
-  </appender>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/logFile.html</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+          <!-- daily rollover -->
+          <fileNamePattern>logs/logFile.%d{yyyy-MM-dd}.%i.html</fileNamePattern>
+          <timeBasedFileNamingAndTriggeringPolicy
+              class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+              <!-- or whenever the file size reaches 100MB -->
+              <maxFileSize>10KB</maxFileSize>
+          </timeBasedFileNamingAndTriggeringPolicy>
+          <!-- keep 30 days' worth of history -->
+          <maxHistory>30</maxHistory>
+        </rollingPolicy>
 
-  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <encoder>
-      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-    </encoder>
-  </appender>
-  
-  <root level="debug">
-    <appender-ref ref="STDOUT" />
-    <appender-ref ref="FILE" />
-  </root>
+        <encoder>
+          <charset>UTF-8</charset>
+          <pattern>%d{HH:mm:ss.SSS}%thread%level%logger%line%msg%n</pattern>
+        </encoder>
+    </appender> 
+
+    <root level="DEBUG">
+      <appender-ref ref="STDOUT" />
+      <appender-ref ref="FILE" />     
+    </root>
 </configuration>
