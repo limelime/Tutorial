@@ -28,7 +28,7 @@ public class SLF4JBasic
      *    It's either through system property
      *      -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
      *        or
-     *      -In simplelogger.properties file on your classpath.     
+     *      -In simplelogger.properties file on your classpath(http://stackoverflow.com/a/5081386).     
      */
   }
 
