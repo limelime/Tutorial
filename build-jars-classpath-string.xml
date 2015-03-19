@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="display_classpath_string" name="Display classpath string of jar files">
+	<!-- Require ANT version 1.7+ because of manifestclasspath -->
+
+  <!-- Define location of jar files -->
+	<path id="path.to.jars">
+		<fileset dir="./lib/">
+			<include name="**/*.jar"/>
+			<exclude name="testng*.jar"/>
+		</fileset>
+	</path>
+
+	<!-- This is the important line: by specifying in the "jarfile" attribute the location of the
+	     generated jar, ANT will be able to deduce the relative path to you jar libraries. -->
+	<manifestclasspath property="lib.list" jarfile="./lib/">
+		<classpath refid="path.to.jars" />
+	</manifestclasspath>
+
+	<target name="display_classpath_string">
+		<echo message="${lib.list}"/>
+	</target>
+
+</project>
