@@ -26,10 +26,11 @@ public class CatchException
     }
   }
   
+  // Simulation of doing some work and throw an exception.
   public void throwAnException()
   {
+    // Doing something.
     throw new RuntimeException("blabla");
   }
-  
-  
+
 }
