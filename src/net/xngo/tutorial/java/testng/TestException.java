@@ -30,7 +30,7 @@ public class TestException
   // Simulation of doing some work and throw an exception.
   public void throwAnException()
   {
-    // Doing something.
+    // Doing something and throw an exception.
     throw new RuntimeException("blabla");
   }
 
