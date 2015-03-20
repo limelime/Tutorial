@@ -4,7 +4,7 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
 
 /**
- * Catch an exception with Testng.
+ * Test an exception with TestNG.
  * @author Xuan Ngo
  *
  */
