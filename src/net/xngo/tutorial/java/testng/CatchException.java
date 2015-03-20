@@ -20,7 +20,7 @@ public class CatchException
       assertTrue(false, "This line should never be run."
                       + " It should throw an exception before this."); // It is a safety net.
     }
-    finally
+    finally // Don't catch(){}. Otherwise TestNG will not catch it. Just do finally{}.
     {
       // Clean up code here.
     }
