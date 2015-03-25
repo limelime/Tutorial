@@ -23,11 +23,11 @@ class CallBackImpl implements CallBack
 {
   public void beforeDoingSomething()
   {
-    System.out.println("Before doing something.");
+    System.out.println("\t Before doing something.");
   }
   public void afterDoingSomething()
   {
-    System.out.println("After doing something.");
+    System.out.println("\t After doing something.");
   }
 }
 
@@ -47,7 +47,7 @@ public class ComplexProcess
   
   private void doSomething()
   {
-    System.out.println("Doing something.");
+    System.out.println("\t Doing something.");
   }
   
   public void run()
@@ -80,7 +80,8 @@ public class ComplexProcess
     defaultComplexProcess.run();
     
     // Run with modification.
-    System.out.println("\nRun with modification:");
+    System.out.println();
+    System.out.println("Run with modification:");
     ComplexProcess complexProcessModified = new ComplexProcess();
     complexProcessModified.setCallBack(new CallBackImpl());
     complexProcessModified.run();
