@@ -43,6 +43,8 @@ public class FlywaydbUseCallback implements FlywayCallback
     flyway.migrate();     
   }
   
+  public void afterBaseline(Connection connection)
+  {}
   public void afterClean(Connection connection)
   {}
   public void afterEachMigrate(Connection connection, MigrationInfo info)
@@ -59,6 +61,8 @@ public class FlywaydbUseCallback implements FlywayCallback
   public void afterRepair(Connection connection)
   {}
   public void afterValidate(Connection connection)
+  {}
+  public void beforeBaseline(Connection connection)
   {}
   public void beforeClean(Connection connection)
   {}
