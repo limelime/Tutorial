@@ -33,7 +33,7 @@ public class FlywaydbUseCallback implements FlywayCallback
     flyway.setLocations("filesystem:C:/temp/Xuan/latest/test/upgrade/sql/");
     
     // Force the creation of 'schema_version' table on existing database.
-    flyway.setInitOnMigrate(true);
+    flyway.setBaselineOnMigrate(true);
     
     // Add the callback.
     FlywaydbUseCallback fcallback = new FlywaydbUseCallback();
