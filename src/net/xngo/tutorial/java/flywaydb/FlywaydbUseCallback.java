@@ -9,7 +9,7 @@ import org.flywaydb.core.api.callback.FlywayCallback;
 import org.flywaydb.core.api.MigrationInfo;
 
 /**
- * How to use Flywaydb programmatically: Using FlywayCallback.
+ * How to use Flywaydb programmatically: Use FlywayCallback.
  * Libraries needed: flyway-core-3.0.jar, sqlite-jdbc-3.7.2.jar
  * 
  * @author Xuan Ngo
