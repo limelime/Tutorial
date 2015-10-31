@@ -1,6 +1,7 @@
 package net.xngo.tutorial.java.callback;
 
 /**
+ * Callback allows you to execute special codes in another process.
  * Reference: http://cleancodedevelopment-qualityseal.blogspot.ca/2012/10/understanding-callbacks-with-java.html
  * @author Xuan Ngo
  *
