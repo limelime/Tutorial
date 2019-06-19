@@ -33,7 +33,9 @@ public class CustomFileFilter
       };              
     
     File file = new File("/some-path-containing-symbolic-links/");
-    Collection<File> filesList = FileUtils.listFiles(file, trueFileFilterNoSymbolicLink, trueFileFilterNoSymbolicLink);
+    Collection<File> filesList = FileUtils.listFiles(file, 
+    												trueFileFilterNoSymbolicLink, 
+    												trueFileFilterNoSymbolicLink);
     
     for(File f: filesList)
     {
