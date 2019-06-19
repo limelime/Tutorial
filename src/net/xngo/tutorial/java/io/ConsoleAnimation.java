@@ -6,36 +6,33 @@ package net.xngo.tutorial.java.io;
  *  then print a new character.
  * Note: You can use the same idea with backspace character('\b')
  *      but from experience, '\r' works much better than '\b'.
- * @author Xuan Ngo
- *
  */
 public class ConsoleAnimation
 {
-
-  public static void main(String[] args)
-  {
-    for(int i=0; i<10; i++)
+    public static void main(String[] args)
     {
-      System.out.print('\r');  sleep();
-      System.out.print('/');  sleep();
-      System.out.print('\r');  sleep();
-      System.out.print('-');  sleep();
-      System.out.print('\r');  sleep();
-      System.out.print('\\');  sleep();
+        for(int i=0; i<10; i++){
+            
+            System.out.print('\r');  sleep();
+            System.out.print('/');   sleep();
+            System.out.print('\r');  sleep();
+            System.out.print('-');   sleep();
+            System.out.print('\r');  sleep();
+            System.out.print('\\');  sleep();
+        }
+
     }
 
-  }
-
-  public static void sleep()
-  {
-    int time = 50; // milliseconds.
-    try
+    public static void sleep()
     {
-      Thread.sleep(time);
+        int time = 50; // milliseconds.
+        try{
+            
+            Thread.sleep(time);
+        }
+        catch(InterruptedException ex){
+            
+            ex.printStackTrace();
+        }
     }
-    catch(InterruptedException ex)
-    {
-      ex.printStackTrace();
-    }
-  }
 }
