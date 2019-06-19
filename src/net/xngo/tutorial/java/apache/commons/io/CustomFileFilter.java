@@ -10,7 +10,6 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
 /**
  * List all files and ignore symbolic links.
  * Provide your own implementation of *FileFilter.
- * @author root
  *
  */
 public class CustomFileFilter
