@@ -26,7 +26,7 @@ public class FinallyBlock
     public static int finallyRanAfterReturn()
     {
         try{
-          return 42;
+        	return 42;
         }
         
         finally{
