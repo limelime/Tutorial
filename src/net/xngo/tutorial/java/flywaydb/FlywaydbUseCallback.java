@@ -43,6 +43,10 @@ public class FlywaydbUseCallback implements FlywayCallback
     flyway.migrate();     
   }
   
+  /**
+   * Here are the available hooks.
+   * 	More details at https://flywaydb.org/documentation/callbacks.html
+   */
   public void afterBaseline(Connection connection)
   {}
   public void afterClean(Connection connection)
