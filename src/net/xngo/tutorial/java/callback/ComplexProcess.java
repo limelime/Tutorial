@@ -1,15 +1,8 @@
 package net.xngo.tutorial.java.callback;
 
 /**
- * Callback allows you to execute special codes in another process.
- * Reference: http://cleancodedevelopment-qualityseal.blogspot.ca/2012/10/understanding-callbacks-with-java.html
- * @author Xuan Ngo
- *
- */
-
-
-/**
  * Definition of your callback/hook.
+ * 	The methods that you allow other process to override.
  */
 interface CallBack 
 {
@@ -82,7 +75,7 @@ public class ComplexProcess
     
     // Run with modification.
     System.out.println();
-    System.out.println("Run with modification:");
+    System.out.println("Run with callbacks:");
     ComplexProcess complexProcessModified = new ComplexProcess();
     complexProcessModified.setCallBack(new CallBackImpl());
     complexProcessModified.run();
